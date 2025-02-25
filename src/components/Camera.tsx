@@ -4,12 +4,15 @@ import { Camera as CameraIcon } from "lucide-react";
 
 interface CameraProps {
   onCapture: (imageData: string) => void;
+  photosLeft: number;
+  currentPhoto: number;
 }
 
-export const Camera = ({ onCapture }: CameraProps) => {
+export const Camera = ({ onCapture, photosLeft, currentPhoto }: CameraProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isFlashing, setIsFlashing] = useState(false);
+  const [countdown, setCountdown] = useState<number | null>(null);
 
   useEffect(() => {
     const startCamera = async () => {
@@ -36,6 +39,20 @@ export const Camera = ({ onCapture }: CameraProps) => {
       stream?.getTracks().forEach(track => track.stop());
     };
   }, []);
+
+  const startCountdown = () => {
+    setCountdown(3);
+    const timer = setInterval(() => {
+      setCountdown(prev => {
+        if (prev === 1) {
+          clearInterval(timer);
+          capturePhoto();
+          return null;
+        }
+        return prev ? prev - 1 : null;
+      });
+    }, 1000);
+  };
 
   const capturePhoto = () => {
     if (videoRef.current && canvasRef.current) {
@@ -91,11 +108,19 @@ export const Camera = ({ onCapture }: CameraProps) => {
       {isFlashing && (
         <div className="absolute inset-0 bg-white animate-photo-flash" />
       )}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/50 px-4 py-2 rounded-full text-white font-caveat text-xl">
+        {countdown ? (
+          `Photo in ${countdown}...`
+        ) : (
+          `Photo ${currentPhoto} of 3`
+        )}
+      </div>
       <button
-        onClick={capturePhoto}
+        onClick={startCountdown}
+        disabled={countdown !== null}
         className="absolute bottom-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-vintage-accent rounded-full 
                  shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200
-                 flex items-center justify-center"
+                 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <CameraIcon className="w-8 h-8 text-white" />
       </button>
