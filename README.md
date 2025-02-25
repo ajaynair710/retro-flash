@@ -1,70 +1,71 @@
+# Retro Flash ✨
 
-# Welcome to your Lovable project
+**A vintage-style photobooth experience that captures the charm of classic instant photography!**
 
-## Project info
+## 📸 Features
 
-**URL**: https://lovable.dev/projects/bac7fd81-2f82-4f41-8e98-996c31004a58
+- **Sepia Filter** – "sepia(0.3) contrast(1.1) brightness(1.1)" for a warm, aged look.
+- **Film Grain Effect** – Adds random noise to simulate the grain of old film.
+- **Vignette Effect** – Darkened borders for an authentic vintage feel.
+- **Polaroid-Style Frame** – Classic white-bordered photo aesthetic.
+- **Development Animation** – Mimics the gradual appearance of an old Polaroid photo.
+- **3-Photo Sequence System** – Captures three consecutive shots for a strip.
+- **Countdown Timer** – Displays a timer before each shot for preparation.
+- **Photo Strip Creation** – Outputs a vertical photo strip upon download.
+- **Caption Input** – Allows users to add a handwritten-style caption to their strip.
+- **Full-Screen Camera View** – Immersive retro aesthetic with a subtle vintage overlay.
+- **Pulsing Capture Button** – Animated button with a satisfying click effect.
+- **Smooth Transitions** – Seamless experience when photos are developing.
+- **Light Leak Effects** – Adds authenticity with subtle film imperfections.
+- **Simple Save Functionality** – Download your vintage photo strip effortlessly.
 
-## How can I edit this code?
+## 🛠️ Technologies Used
 
-There are several ways of editing your application.
+- **Vite** – Fast build tool for modern web apps.
+- **React** – Component-based UI framework.
+- **TypeScript** – Type-safe JavaScript for better maintainability.
+- **shadcn-ui** – Elegant and customizable UI components.
+- **Tailwind CSS** – Utility-first CSS for responsive styling.
 
-**Use Lovable**
+## 🚀 Installation & Setup
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/bac7fd81-2f82-4f41-8e98-996c31004a58) and start prompting.
+1. Clone the repository:
+   ```sh
+   git clone <YOUR_GIT_URL>
+   cd <YOUR_PROJECT_NAME>
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+4. Open the app in your browser at `http://localhost:5173` (default Vite port).
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📂 Usage
 
-**Use your preferred IDE**
+1. Open the **Retro Flash** photobooth.
+2. Get ready for a **3-photo sequence** with a countdown before each shot.
+3. Watch your **Polaroid-style photos develop** on screen.
+4. Add a **caption** to your photo strip.
+5. **Download** the final vintage-style strip as a single image.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🖼️ Styling Highlights
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Handwriting-style font** for captions.
+- **Perfectly proportioned Polaroid frame.**
+- **Smooth transitions and click animations.**
+- **Authentic film grain & light leaks.**
 
-Follow these steps:
+## 📢 Future Improvements
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Add more vintage filters (e.g., black & white, faded color).
+- Allow users to choose between different frame styles.
+- Option to customize the number of photos in the strip.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 💡 Contributing
 
-# Step 3: Install the necessary dependencies.
-npm i
+Pull requests are welcome! Feel free to submit bug reports, feature suggestions, or improvements.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/bac7fd81-2f82-4f41-8e98-996c31004a58) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
