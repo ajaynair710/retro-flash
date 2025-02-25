@@ -31,7 +31,7 @@
 
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/ajaynair710/retro-flash](https://github.com/ajaynair710/retro-flash)
+   git clone https://github.com/ajaynair710/retro-flash
    cd retro-flash
    ```
 2. Install dependencies:
